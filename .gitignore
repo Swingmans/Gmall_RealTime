@@ -1,0 +1,11 @@
+# Project exclude paths
+/*/target/
+# Intellij
+*.iml
+*/*.iml
+#some local files
+*/.settings/
+*/.DS_Store
+.DS_Store
+*/.idea/
+.idea/
