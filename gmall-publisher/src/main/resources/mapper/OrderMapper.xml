@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.atguigu.gmall.publisher.mapper.OrderMapper">
+
+    <select id="getTotalAccount" parameterType="java.lang.String" resultType="java.lang.Double">
+        select sum(total_amount) From gmall2019_order_info where create_date=#{date}
+    </select>
+
+    <select id="getTotalHoursByDate" parameterType="java.lang.String" resultType="com.atguigu.gmall.publisher.bean.HourAmount">
+        select
+        create_hour as hour,
+        sum(total_amount) as amount
+        From gmall2019_order_info
+        where create_date=#{date}
+        group by create_hour
+    </select>
+
+</mapper>
