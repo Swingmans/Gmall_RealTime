@@ -14,4 +14,8 @@ object GmallConstant {
 
   val KAFKA_TOPIC_USER: String = "GMALL_USER"
 
+  val ES_INDEX_ALERT: String = "gmall0513_coupon_alert"
+
+  val ES_DEFAULT_TYPE: String = "_doc"
+
 }
